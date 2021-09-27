@@ -1,0 +1,83 @@
+@import url(https://fonts.googleapis.com/css?family=Droid+Sans);
+
+*, *::before, *::after {
+  font-family: 'Droid Sans', sans-serif;
+  font-weight: normal;
+}
+body {
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #0AF, #00FF6C);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 300px;
+  height: 450px;
+  background-color: black;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: minmax(100px, auto) repeat(5, 1fr);
+  gap: 15px;
+  padding: 20px;
+  border-radius: 15px;
+  
+  grid-template-areas: 
+    "output output output output"
+    "ac ac del divide"
+    "one two three times"
+    "four five six plus"
+    "seven eight nine minus"
+    "period zero equal equal";
+    
+}
+.output {
+  grid-area: output;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding-right: 18px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.output .previous-operand {
+  font-size: 1.5rem;
+}
+.output .current-operand {
+  font-size: 2.5rem;
+}
+.btn {
+  background-color: lightblue;
+  border-radius: 5px;
+  box-shadow: .8px .8px 9px 1px rgb(100,100,100);
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: rgb(220, 220, 220);
+}
+.item-1 { grid-area: one }
+.item-2 { grid-area: two }
+.item-3 { grid-area: three }
+.item-4 { grid-area: four }
+.item-5 { grid-area: five }
+.item-6 { grid-area: six }
+.item-7 { grid-area: seven }
+.item-8 { grid-area: eight }
+.item-9 { grid-area: nine }
+.item-0 { grid-area: zero }
+.item-ac { grid-area: ac }
+.item-del { grid-area: del }
+.item-plus { grid-area: plus }
+.item-minus { grid-area: minus }
+.item-div { grid-area: divide }
+.item-mult { grid-area: times }
+.item-dec { grid-area: period }
+.item-equal { grid-area: equal }
